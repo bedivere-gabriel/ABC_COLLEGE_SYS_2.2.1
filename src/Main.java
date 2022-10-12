@@ -1,51 +1,91 @@
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
+import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
 import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.GridBagLayout;
-import javax.swing.BoxLayout;
-import java.awt.CardLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Color;
-import java.awt.SystemColor;
-import javax.swing.SwingConstants;
 
 public class Main {
-    public static void main(String[] args)
-    {
-//        Runtime_database data = new Runtime_database();
-//
-//        Student obj = new Student(123, "Jane Mylene", "Pagtalunan", "Bulacan", "Female", "09123456789", 4, 2, 1000);
-//        obj.generateID();
-//        obj.setUserID(obj.getUserID());
-//        obj.computeNumberOfModules();
-//        obj.computeTotalAmount();
-//        obj.computeBalance();
-//
-//        data.addStudent(obj);
-//
-//        Student obj2 = new Student(123, "John Gabriel", "Pagtalunan", "Bulacan", "Male", "09123456789", 4, 2, 800);
-//        obj2.generateID();
-//        obj2.setUserID(obj2.getUserID());
-//        obj2.computeNumberOfModules();
-//        obj2.computeTotalAmount();
-//        obj2.computeBalance();
-//
-//        data.addStudent(obj2);
-//
-//        data.displayStudentList();
-//
-//        Student obj3 = new Student(20221, "Gabriel", "Pagtalunan", "Manila", "Male", "09123456789", 4, 2, 500);
-//        obj3.computeNumberOfModules();
-//        obj3.computeTotalAmount();
-//        obj3.computeBalance();
-//
-//        data.updateStudent(20221, obj3);
-//        data.displayStudentList();
-    }
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main window = new Main();
+					window.frame.setVisible(true);
+					window.frame.setLocationRelativeTo(null);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Main() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setUndecorated(true);
+		frame.getContentPane().setBackground(new Color(33, 37, 41));
+		frame.setBackground(new Color(33, 37, 41));
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 584, 291);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel TItleLabel = new JLabel("ABC COLLEGE FINANCIAL MANAGEMENT SYSTEM", SwingConstants.CENTER);
+		TItleLabel.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 17));
+		TItleLabel.setForeground(new Color(248, 249, 250));
+		TItleLabel.setBounds(10, 21, 564, 49);
+		frame.getContentPane().add(TItleLabel);
+		
+		JButton teacherButton = new JButton("TEACHERS");
+		teacherButton.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
+		teacherButton.setForeground(new Color(33, 37, 41));
+		teacherButton.setBackground(new Color(248, 249, 250));
+		teacherButton.setBounds(208, 119, 170, 23);
+		frame.getContentPane().add(teacherButton);
+		
+		JButton studentButton = new JButton("STUDENTS");
+		studentButton.setForeground(new Color(33, 37, 41));
+		studentButton.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
+		studentButton.setBackground(new Color(248, 249, 250));
+		studentButton.setBounds(208, 166, 170, 23);
+		frame.getContentPane().add(studentButton);
+		
+		JButton btnQuit = new JButton("QUIT");
+		btnQuit.setForeground(new Color(33, 37, 41));
+		btnQuit.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
+		btnQuit.setBackground(new Color(248, 249, 250));
+		btnQuit.setBounds(208, 215, 170, 23);
+		frame.getContentPane().add(btnQuit);
+		
+		
+		/**
+		 * ACTION EVENT LISTENERS
+		 */
+		btnQuit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+	}
 }
