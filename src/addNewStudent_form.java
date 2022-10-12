@@ -20,6 +20,7 @@ public class addNewStudent_form {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private JTextField textField_5;
 
 	/**
 	 * Launch the application.
@@ -79,11 +80,11 @@ public class addNewStudent_form {
 		
 		JButton btnNewButton = new JButton("GENERATE ID");
 		btnNewButton.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 11));
-		btnNewButton.setBounds(299, 136, 108, 23);
+		btnNewButton.setBounds(520, 309, 108, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 		textField = new JTextField();
-		textField.setBounds(414, 137, 86, 20);
+		textField.setBounds(638, 310, 86, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
@@ -142,5 +143,38 @@ public class addNewStudent_form {
 		lblSex.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
 		lblSex.setBounds(359, 313, 57, 14);
 		frame.getContentPane().add(lblSex);
+		
+		JButton btnReturn = new JButton("Return");
+		btnReturn.setForeground(new Color(33, 37, 41));
+		btnReturn.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
+		btnReturn.setBackground(new Color(248, 249, 250));
+		btnReturn.setBounds(633, 396, 88, 23);
+		frame.getContentPane().add(btnReturn);
+		
+		JButton btnCheckDetails = new JButton("Check Details");
+		btnCheckDetails.setForeground(new Color(33, 37, 41));
+		btnCheckDetails.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
+		btnCheckDetails.setBackground(new Color(248, 249, 250));
+		btnCheckDetails.setBounds(299, 396, 108, 23);
+		frame.getContentPane().add(btnCheckDetails);
+		
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.setForeground(new Color(33, 37, 41));
+		btnSubmit.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
+		btnSubmit.setBackground(new Color(248, 249, 250));
+		btnSubmit.setBounds(412, 396, 88, 23);
+		frame.getContentPane().add(btnSubmit);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(299, 136, 44, 20);
+		frame.getContentPane().add(textField_5);
+		textField_5.setColumns(10);
+		
+		JButton btnEnter = new JButton("Enter Number of Repeat Modules");
+		btnEnter.setForeground(new Color(33, 37, 41));
+		btnEnter.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 12));
+		btnEnter.setBackground(new Color(248, 249, 250));
+		btnEnter.setBounds(351, 135, 232, 23);
+		frame.getContentPane().add(btnEnter);
 	}
 }
