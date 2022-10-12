@@ -87,5 +87,13 @@ public class Main {
 				System.exit(0);
 			}
 		});
+		
+		studentButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Student_form stud_frame = new Student_form();
+				stud_frame.student_form(null);
+				frame.dispose();
+			}
+		});
 	}
 }
