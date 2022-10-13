@@ -10,6 +10,9 @@ import javax.swing.SwingConstants;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JLabel;
 
 public class addNewStudent_form {
@@ -176,5 +179,13 @@ public class addNewStudent_form {
 		btnEnter.setBackground(new Color(248, 249, 250));
 		btnEnter.setBounds(351, 135, 232, 23);
 		frame.getContentPane().add(btnEnter);
+		
+		btnReturn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Student_form studentform = new Student_form();
+				studentform.student_form(null);
+				frame.dispose();
+			}
+		});
 	}
 }

@@ -119,6 +119,57 @@ public class Student_form {
 		
 		btnAddNewStudent.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				addNewStudent_form addnewstudent = new addNewStudent_form();
+				addnewstudent.addnewstudent_form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnUpdateStudent.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				updateStudent_form updatestudent = new updateStudent_form();
+				updatestudent.updatestudent_form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnDeleteStudent.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				deleteStudent_form deletestudentform = new deleteStudent_form();
+				deletestudentform.deletestudent_form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnShowRemainingBalance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				remainingBalanceStudent_form remainingBalance = new remainingBalanceStudent_form();
+				remainingBalance.remainingbalancestudent__form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnFeeDeposit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				feeDepositStudent_form feedeposit = new feeDepositStudent_form();
+				feedeposit.feedepositstudent_form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnDisplayAllStudents.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				zeroBalanceStudent_form zerobalance = new zeroBalanceStudent_form();
+				zerobalance.zerobalancestudent_form(null);
+				frame.dispose();
+			}
+		});
+		
+		btnStudentsWithNonzero.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				withBalanceStudent_form withbalance = new withBalanceStudent_form();
+				withbalance.withbalancestudent_form(null);
+				frame.dispose();
 			}
 		});
 		
