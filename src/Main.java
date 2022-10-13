@@ -95,5 +95,13 @@ public class Main {
 				frame.dispose();
 			}
 		});
+		
+		teacherButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Teacher_form teach_frame = new Teacher_form();
+				teach_frame.teacher_form(null);
+				frame.dispose();
+			}
+		});
 	}
 }
